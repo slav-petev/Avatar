@@ -1,4 +1,6 @@
-﻿namespace Avatar.Logic.Monuments
+﻿using Avatar.Logic.Common.Extensions;
+
+namespace Avatar.Logic.Monuments
 {
     public abstract class Monument
     {
@@ -9,8 +11,7 @@
 
         public override string ToString()
         {
-            var monumentTypeName = this.GetType().Name
-                .Replace(nameof(Monument), string.Empty);
+            var monumentTypeName = this.GetTypeName(nameof(Monument));
 
             return $"{monumentTypeName} Monument: {this.Name}, {this.ToMonumentString()}";
         }

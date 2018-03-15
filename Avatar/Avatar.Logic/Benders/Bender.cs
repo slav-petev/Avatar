@@ -1,4 +1,6 @@
-﻿namespace Avatar.Logic.Benders
+﻿using Avatar.Logic.Common.Extensions;
+
+namespace Avatar.Logic.Benders
 {
     public abstract class Bender
     {
@@ -13,8 +15,7 @@
 
         public override string ToString()
         {
-            var benderTypeName = this.GetType().Name
-                .Replace(nameof(Bender), string.Empty);
+            var benderTypeName = this.GetTypeName(nameof(Bender));
 
             return $"{benderTypeName} Bender: {this.Name}, Power: {this.Power}, {this.ToBenderString()}";
         }

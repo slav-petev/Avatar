@@ -13,7 +13,7 @@ namespace Avatar.Logic.Monuments
         {
             var monumentTypeName = this.GetTypeName(nameof(Monument));
 
-            return $"{monumentTypeName} Monument: {this.Name}, {this.ToMonumentString()}";
+            return $"{monumentTypeName}: {this.Name}, {this.ToMonumentString()}";
         }
 
         public abstract uint CalculateNationPowerIncrease();

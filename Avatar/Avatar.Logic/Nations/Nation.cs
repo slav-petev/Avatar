@@ -54,7 +54,7 @@ namespace Avatar.Logic.Nations
         public override string ToString()
         {
             var nationTypeName = this.GetTypeName(nameof(Nation));
-            return $"{nationTypeName} Nation{Environment.NewLine}{_benders.ToBendersStringRepresentation()}{_monuments.ToMonumentsStringRepresentation()}";
+            return $"{nationTypeName}{Environment.NewLine}{_benders.ToBendersStringRepresentation()}{_monuments.ToMonumentsStringRepresentation()}";
         }
     }
 }

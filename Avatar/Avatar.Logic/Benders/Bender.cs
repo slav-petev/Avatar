@@ -17,7 +17,7 @@ namespace Avatar.Logic.Benders
         {
             var benderTypeName = this.GetTypeName(nameof(Bender));
 
-            return $"{benderTypeName} Bender: {this.Name}, Power: {this.Power}, {this.ToBenderString()}";
+            return $"{benderTypeName}: {this.Name}, Power: {this.Power}, {this.ToBenderString()}";
         }
 
         public abstract double CalculateTotalPower();
